@@ -1,0 +1,30 @@
+/*折线图组件样式*/
+.h5_component_polyline{
+
+}
+.h5_component_polyline canvas{
+    position: absolute;/*用canvas进行做动画的话将会涉及分层z-index，用到*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #eee;*/
+
+}
+.h5_component_polyline .text{
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    bottom:-20px;
+    height:20px;
+    line-height:20px;
+    -webkit-transform: scale(.8);/*//谷歌浏览器不能显示小于12px大小，所以用缩放的方式缩小字体大小*/
+  -webkit-transition:all 1s 1.5s;/*//最后的1s表示延迟时间，让下面的项目名称在动画完成之后再现身*/
+    -webkit-opacity: 0;
+}
+.h5_component_polyline_load .text{
+    -webkit-opacity: 1;
+}
+.h5_component_polyline_leave .text{
+    -webkit-opacity: 0;
+}

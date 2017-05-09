@@ -1,0 +1,21 @@
+/*折线图组件样式*/
+.h5_component_radar{
+
+}
+.h5_component_pie canvas{
+    position: absolute;/*用canvas进行做动画的话将会涉及分层z-index，用到*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #eee;*/
+
+}
+
+.h5_component_pie .text{
+    position: absolute;
+    z-index: 99;
+    text-align:center;
+    height: 24px;
+    transition: all 1s;
+}
